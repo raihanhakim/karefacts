@@ -23,11 +23,3 @@ export const PRODUCT_TYPES: Array<{ value: ProductType; label: string }> = [
   { value: "produk_susu", label: "Produk susu" },
   { value: "lainnya", label: "Lainnya" },
 ];
-
-export const REFERENCES = [
-  "BPOM - Label Pangan Olahan",
-  "BPOM - Informasi Nilai Gizi",
-  "BPOM - Klaim pada Label dan Iklan Pangan Olahan",
-  "BPOM - Pelabelan Alergen",
-  "Kemenkes - Edukasi Gula, Garam, Lemak",
-];
