@@ -77,7 +77,7 @@ export default function NutritionGeminiReader({ onUseDetectedNutrition }: Props)
   const readWithGemini = async () => {
     if (!file) return;
     setLoading(true);
-    setError("");
+    setError(croppedBlob ? "" : "Untuk hasil lebih jelas, crop dulu bagian tabel gizi.");
     setResult(null);
     try {
       const formData = new FormData();
@@ -174,6 +174,9 @@ export default function NutritionGeminiReader({ onUseDetectedNutrition }: Props)
           if (preview) URL.revokeObjectURL(preview);
           setFile(nextFile);
           setPreview(URL.createObjectURL(nextFile));
+          if (croppedPreview) URL.revokeObjectURL(croppedPreview);
+          setCroppedBlob(null);
+          setCroppedPreview(null);
           setResult(null);
           setError("");
         }}
@@ -183,7 +186,7 @@ export default function NutritionGeminiReader({ onUseDetectedNutrition }: Props)
       {preview ? (
         <div className="mt-4 space-y-3">
           <ImageCropper imageSrc={preview} onCropReady={onCropReady} onChangeImage={removeImage} />
-          {croppedPreview ? <div className="rounded-2xl bg-emerald-50 p-3"><p className="text-sm font-black text-emerald-900">Preview hasil crop</p><img src={croppedPreview} alt="Preview hasil crop tabel gizi" className="mt-2 max-h-72 w-full rounded-2xl object-contain" /></div> : <p className="rounded-2xl bg-yellow-50 p-3 text-sm font-bold text-yellow-900">Untuk hasil lebih jelas, crop dulu bagian tabel gizi.</p>}
+          {croppedPreview ? <div className="rounded-2xl bg-emerald-50 p-3"><p className="text-sm font-black text-emerald-900">Hasil crop yang akan dibaca</p><img src={croppedPreview} alt="Hasil crop tabel gizi" className="mt-2 max-h-72 w-full rounded-2xl bg-white object-contain" /></div> : <p className="rounded-2xl bg-yellow-50 p-3 text-sm font-bold text-yellow-900">Untuk hasil lebih jelas, crop dulu bagian tabel gizi.</p>}
         </div>
       ) : null}
       <button type="button" onClick={readWithGemini} disabled={!file || loading} className="mt-4 w-full rounded-2xl bg-emerald-600 px-5 py-4 font-bold text-white hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200 disabled:opacity-60">{loading ? "KareFacts lagi baca labelnya..." : "Baca Tabel Gizi"}</button>
