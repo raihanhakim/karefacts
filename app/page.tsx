@@ -1,4 +1,5 @@
 import Disclaimer from "@/components/Disclaimer";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 
@@ -31,6 +32,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 }

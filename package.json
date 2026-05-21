@@ -1,6 +1,8 @@
 {
   "name": "karefacts",
   "version": "1.0.0",
+  "author": "raihanhakim",
+  "copyright": "Copyright by kareayamq",
   "private": true,
   "scripts": {
     "dev": "next dev",

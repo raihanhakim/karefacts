@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LabelForm from "@/components/LabelForm";
 
@@ -16,6 +17,7 @@ export default async function AnalyzerPage({ searchParams }: { searchParams: Pro
         </div>
         <LabelForm sampleRequest={sampleRequest} />
       </div>
+      <Footer />
     </main>
   );
 }

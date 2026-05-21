@@ -4,6 +4,10 @@ KareFacts adalah Food Label Analyzer edukatif untuk membantu pengguna memahami f
 
 Tagline: "Baca fakta di balik label pangan."
 
+Author: raihanhakim
+
+Copyright: Copyright by kareayamq
+
 ## Fitur
 
 - Landing page modern dan mobile-first.
