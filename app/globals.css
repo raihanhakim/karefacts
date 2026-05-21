@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #fff8e7 0%, #f0fdf4 48%, #ecfdf5 100%);
+  color: #0f172a;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+.halftone-pattern {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.16) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.package-card {
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(250, 204, 21, 0.26), transparent 22%),
+    radial-gradient(circle at 90% 10%, rgba(132, 204, 22, 0.24), transparent 24%),
+    linear-gradient(135deg, rgba(255, 248, 231, 0.98), rgba(240, 253, 244, 0.96));
+}
