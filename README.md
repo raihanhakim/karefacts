@@ -6,7 +6,7 @@ Tagline: "Baca fakta di balik label pangan."
 
 Author: raihanhakim
 
-Copyright: Copyright by kareayamq
+Copyright: Copyright 2026 by kareayamq
 
 ## Fitur
 
